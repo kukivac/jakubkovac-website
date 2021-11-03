@@ -1,0 +1,291 @@
+.introduction-container {
+  display: flex;
+  flex-flow: row;
+  margin-top: 255px;
+
+  .introduction-scroll-text {
+    p {
+      font-size: 17px;
+      font-weight: 300;
+      position: absolute;
+      left: 50px;
+      top: 670px;
+      transform-origin: 0 0;
+      color: #0055EC;
+      animation: slide-bottom 10s cubic-bezier(0.645, 0.045, 0.355, 1.000) alternate infinite;
+    }
+
+    p:before {
+      position: relative;
+      right: 15px;
+      top: 3px;
+      content: "";
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      border-right: 0.2em solid black;
+      border-top: 0.2em solid black;
+      transform: rotate((135+90deg));
+    }
+
+    @keyframes slide-bottom {
+      0% {
+        transform: translateY(0) rotate(-90deg);
+      }
+      40% {
+        transform: translateY(0) rotate(-90deg);
+      }
+      50% {
+        transform: translateY(40px) rotate(-90deg);
+      }
+      50% {
+        transform: translateY(0px) rotate(-90deg);
+      }
+      100% {
+        transform: translateY(0px) rotate(-90deg);
+      }
+    }
+  }
+
+  .introduction-main-text {
+    display: flex;
+    flex-flow: column;
+    margin-left: 200px;
+
+    > * {
+      margin-top: 0;
+    }
+
+    > h1 {
+      font-size: 60px;
+      font-weight: 600;
+      margin-bottom: 27px;
+    }
+
+    > h2 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 27px;
+    }
+
+    > p {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 30px;
+      max-width: 600px;
+    }
+
+    .introduction-buttons-container {
+      display: flex;
+      flex-flow: row nowrap;
+      margin-bottom: 25px;
+
+      > button {
+        border: 0;
+        border-radius: 29px;
+        display: block;
+        width: 165px;
+        height: 57px;
+        font-size: 15px;
+        font-weight: 600;
+        margin-right: 17px;
+      }
+
+      .introduction-hire-button {
+        background-color: #0055EC;
+        color: #FFFFFF;
+      }
+
+      .introduction-chat-button {
+        background-color: #E4F3EC;
+        color: #000000;
+      }
+    }
+
+    .introduction-profile-container {
+      background-color: #FFFFFF;
+      display: flex;
+      flex-flow: row nowrap;
+      width: (577-(2*26px));
+      height: (158-(2*23px));
+      border-radius: 38px;
+      border: 0;
+      box-shadow: 0 3px 6px 1px rgba(0, 0, 0, 0.16);
+      padding: 23px 26px;
+
+      img {
+        border-radius: 90px;
+        margin-right: 30px;
+      }
+
+      .introduction-profile-name {
+        font-weight: 600;
+        font-size: 17px;
+        margin-bottom: 14px;
+        margin-top: 0;
+        color: #0055EC;
+      }
+
+      .introduction-profile-desc {
+        font-weight: 400;
+        font-size: 15px;
+        margin-top: 0;
+        margin-bottom: 0;
+        color: #707070;
+      }
+    }
+
+    .introduction-social-buttons {
+      display: flex;
+      flex-flow: row nowrap;
+      margin-top: 28px;
+      justify-content: center;
+      width: 577px;
+
+      div {
+        margin: 0 5.5px;
+        height: (55-(2*11px));
+        width: (55-(2*11px));
+        background-color: #E1F4EC;
+        border: 0;
+        border-radius: 90px;
+        display: block;
+        padding: 11px;
+        cursor: pointer;
+
+        > img {
+          height: 33px;
+          width: 33px;
+        }
+      }
+    }
+  }
+
+  .introduction-popup-info {
+    position: absolute;
+    right: 57px;
+
+    .introduction-popup-box {
+      height: 228px;
+      width: 373px;
+      padding: 0;
+      margin: 0;
+      box-shadow: 0 3px 6px 1px rgba(0, 0, 0, 0.16);
+      border: 0;
+      border-radius: 48px;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+
+      > section {
+        display: flex;
+        flex-flow: row nowrap;
+        padding: 0;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 17px;
+        font-weight: 600;
+      }
+
+      .introduction-popup-desc {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: flex-start;
+
+        p {
+          margin: 0;
+          vertical-align: top;
+        }
+      }
+    }
+
+    > .shoptet {
+      color: #0055EC;
+      background-color: #FFFFFF;
+      margin-bottom: 100px;
+
+      img {
+        height: 63.86px;
+        width: 138.38px;
+      }
+
+      h1 {
+        margin-bottom: 40px;
+      }
+
+      span {
+        font-size: 72px;
+        font-weight: 800;
+      }
+
+      p {
+        text-align: center;
+        font-size: 17px;
+        font-weight: 600;
+      }
+
+      .introduction-popup-desc {
+        max-height: 90px;
+
+        p {
+          line-height: 30px;
+        }
+      }
+    }
+
+    > .development {
+      color: #FFFFFF;
+      background-color: #0055EC;
+
+      img {
+        height: 69.84px;
+        width: 99.75px;
+      }
+
+      h1 {
+        margin-bottom: 28px;
+      }
+
+      span {
+        font-size: 28px;
+      }
+
+      p {
+        text-align: left;
+        font-size: 17px;
+        font-weight: 600;
+      }
+
+      .introduction-popup-desc p {
+        display: flex;
+        flex-flow: column;
+        align-content: space-between;
+      }
+    }
+  }
+
+  .introduction-background-images {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    top: 150px;
+    margin-left: 5%;
+    @media (max-width: 1600px){
+      margin-left: 10%;
+    }
+    @media (max-width: 1400px){
+      margin-left: 15%;
+    }
+    .background-image{
+      z-index: -10;
+      position: absolute;
+      height: 800px;
+      width: 800px;
+      background-image: url("./images/background.svg");
+    }
+  }
+}
